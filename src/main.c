@@ -5,7 +5,14 @@
 ** corefile - main
 */
 
-# include "extern.h"
 # include "philo.h"
 
+bool	get_arguments()
+{
 
+}
+
+int	main()
+{
+
+}
