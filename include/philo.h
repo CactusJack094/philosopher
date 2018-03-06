@@ -21,7 +21,7 @@
 typedef	__SIZE_TYPE__	size_t;
 typedef	enum	{false, true}	bool;
 
-enum	state
+enum	e_state
 {
 	NOT,
 	EAT,
