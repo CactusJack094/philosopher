@@ -31,10 +31,10 @@ bool	get_arguments(size_t ac, char **av, size_t *nbr_p, size_t *nbr_e)
 
 int	main(int ac, char **av)
 {
-	size_t	nb;
-	size_t	max;
+	size_t	nb = 0;
+	size_t	max = 0;
 
-	/* if (strcmp(av[2], "--help")) { */
+	/* if (strcmp(av[1], "--help")) { */
 	/* 	write(1, USAGE, 64); */
 	/* } */
 	RCFStartup(ac, av);

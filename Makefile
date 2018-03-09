@@ -17,12 +17,13 @@ SRCS	= ./src/action.c \
 OBJS	= $(SRCS:.c=.o)
 
 CFLAGS = -I ./include/
-CFLAGS += -lpthread -W -Wall -Wextra
+CFLAGS +=  -W -Wall -Wextra
+LDFLAGS += -L. -lriceferee -lpthread
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	 $(CC)  $(LDFLAGS) $(OBJS) libriceferee.so -o $(NAME)
+	 $(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
 
 clean:
 	$(RM) $(OBJS)
