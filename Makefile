@@ -1,27 +1,30 @@
-NAME	= program
 
-CC	= 
+CC		=	gcc
 
-RM	= rm -f
+RM		=	rm -rf
 
-SRCS	= 
+NAME	=	philo
 
-OBJS	= $(SRCS:=.o)
+SRC		= 	src/main2.c \
+			src/philo2.c
 
-CFLAGS = -I 
-CFLAGS += -W -Wall -Wextra
+CFLAGS	=	-W -Wall -Wextra -Werror
 
-all: $(NAME)
+LDFLAGS	=	-lpthread
 
-$(NAME): $(OBJS)
-	 $(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
+OBJ		=	$(SRC:.c=.o)
 
-clean:
-	$(RM) $(OBJS)
+$(NAME)	: $(OBJ)
+	$(CC) $(LDFLAGS) $(CFLAGS) libriceferee.so $(OBJ) -o $(NAME)
 
-fclean: clean
+all		:	$(NAME)
+
+clean	:
+	$(RM) $(OBJ)
+
+fclean	:	clean
 	$(RM) $(NAME)
 
-re: fclean all
+re		:	fclean all
 
-.PHONY: all clean fclean re
+.PHONY	:	all clean fclean re
