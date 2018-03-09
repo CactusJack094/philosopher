@@ -5,8 +5,8 @@ RM		=	rm -rf
 
 NAME	=	philo
 
-SRC		= 	src/main2.c \
-			src/philo2.c
+SRC		= 	src/main.c \
+			src/action.c
 
 CFLAGS	=	-W -Wall -Wextra -Werror
 
