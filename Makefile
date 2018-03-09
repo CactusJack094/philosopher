@@ -1,30 +1,35 @@
+##
+## EPITECH PROJECT, 2018
+## philosopher
+## File description:
+## makefile - philo
+##
 
-CC		=	gcc
+NAME	= philo
 
-RM		=	rm -rf
+CC	= gcc
 
-NAME	=	philo
+RM	= rm -f
 
-SRC		= 	src/main.c \
-			src/action.c
+SRCS	= ./src/action.c \
+	  ./src/main.c 
 
-CFLAGS	=	-W -Wall -Wextra -Werror
+OBJS	= $(SRCS:.c=.o)
 
-LDFLAGS	=	-lpthread
+CFLAGS = -I ./include/
+CFLAGS += -lpthread -W -Wall -Wextra
 
-OBJ		=	$(SRC:.c=.o)
+all: $(NAME)
 
-$(NAME)	: $(OBJ)
-	$(CC) $(LDFLAGS) $(CFLAGS) libriceferee.so $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	 $(CC)  $(LDFLAGS) $(OBJS) libriceferee.so -o $(NAME)
 
-all		:	$(NAME)
+clean:
+	$(RM) $(OBJS)
 
-clean	:
-	$(RM) $(OBJ)
-
-fclean	:	clean
+fclean: clean
 	$(RM) $(NAME)
 
-re		:	fclean all
+re: fclean all
 
-.PHONY	:	all clean fclean re
+.PHONY: all clean fclean re
