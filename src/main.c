@@ -34,10 +34,9 @@ int	main(int ac, char **av)
 	size_t	nb;
 	size_t	max;
 
-	if (!get_arguments(&nb, &max, av, ac)) {
-		write(1, USAGE, 64);
-		return (84);
-	}
+	/* if (strcmp(av[2], "--help")) { */
+	/* 	write(1, USAGE, 64); */
+	/* } */
 	RCFStartup(ac, av);
 	init_philo(nb, max);
 	RCFCleanup();

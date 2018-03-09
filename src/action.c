@@ -60,7 +60,7 @@ bool	init_philo(size_t nb, size_t max)
 		if (pthread_mutex_init(&philo[i].mutex, NULL) != 0)
 			return (false);
 		/* if (pthread_create(&philo[i].thread, NULL, */
-		/* &action, &philo[i])!= 0) */
+		/* &action, NULL)!= 0) */
 		/* 	return (false); */
 		/* if (pthread_join(&philo[i++].thread, NULL) != 0) */
 		/* 	return (false); */
