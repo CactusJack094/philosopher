@@ -17,7 +17,7 @@ CFLAGS	+= -fPIC
 CFLAGS  += -I./include/
 LDFLAGS += -L. -lriceferee -lpthread
 
-NAME    = philosopher
+NAME    = philo
 
 SRC     = sources/start_programm.c \
 	sources/init_list.c \

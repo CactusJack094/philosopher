@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** philosopher
 ** File description:
-** main
+** core file - main
 */
 
 #include "my.h"
@@ -11,9 +11,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-int get_phil(int ac, char **av)
+int	get_phil(int ac, char **av)
 {
-	int i = 0;
+	int	i = 0;
 
 	while (i != ac) {
 		if (strcmp(av[i], "-p") == 0) {
@@ -27,9 +27,9 @@ int get_phil(int ac, char **av)
 	return (-1);
 }
 
-int get_eat(int ac, char **av)
+int	get_eat(int ac, char **av)
 {
-	int i = 0;
+	int	i = 0;
 
 	while (i != ac) {
 		if (strcmp(av[i], "-e") == 0) {
@@ -43,10 +43,10 @@ int get_eat(int ac, char **av)
 	return (-1);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	int nb_phil = get_phil(ac, av);
-	int nb_eat = get_eat(ac, av);
+	int	nb_phil = get_phil(ac, av);
+	int	nb_eat = get_eat(ac, av);
 
 	if (nb_phil <= 0 || nb_eat < 0) {
 		printf("Wrong parameters\n");

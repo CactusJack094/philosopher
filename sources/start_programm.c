@@ -9,7 +9,7 @@
 #include "extern.h"
 #include <unistd.h>
 
-void philo_eat(t_philosoph *philo)
+void	philo_eat(t_philosoph *philo)
 {
 	pthread_mutex_lock(&philo->next->chopstick);
 	lphilo_take_chopstick(&philo->next->chopstick);
@@ -21,7 +21,7 @@ void philo_eat(t_philosoph *philo)
 	philo->number_of_lunchs = philo->number_of_lunchs - 1;
 }
 
-void philo_think(t_philosoph *philo)
+void	philo_think(t_philosoph *philo)
 {
 	pthread_mutex_lock(&philo->chopstick);
 	lphilo_take_chopstick(&philo->chopstick);
@@ -30,9 +30,9 @@ void philo_think(t_philosoph *philo)
 	pthread_mutex_unlock(&philo->chopstick);
 }
 
-void *philo_actions(void *arg)
+void	*philo_actions(void *arg)
 {
-	t_philosoph *philos = arg;
+	t_philosoph	*philos = arg;
 
 	for ( ; philos->number_of_lunchs > 0 ; ) {
 		philo_think(philos);
@@ -42,10 +42,10 @@ void *philo_actions(void *arg)
 	pthread_exit(NULL);
 }
 
-void start_programm(int nb_phil, int nb_eat)
+void	start_programm(int nb_phil, int nb_eat)
 {
-	t_philosoph *philos = NULL;
-	pthread_t thread[nb_phil];
+	t_philosoph	*philos = NULL;
+	pthread_t	thread[nb_phil];
 
 	philos = init_list(philos, nb_phil, nb_eat);
 	for (int i = 0 ; i < nb_phil ; i++) {

@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2018
+** extern
+** File description:
+** header made by epitech
+*/
+
 #ifndef __LIBRICEFEREE_EXTERN__
 # define __LIBRICEFEREE_EXTERN__
 
