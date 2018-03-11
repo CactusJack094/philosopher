@@ -1,11 +1,8 @@
 ﻿##
-## Makefile for make in /home/jean.morize/CPool_infinadd
-##
-## Made by Jean Morize
-## Login   <jean.morize@epitech.net>
-##
-## Started on  Tue Oct 25 14:41:12 2016 Jean Morize
-## Last update Tue Nov  8 15:55:20 2016 Jean Morize
+## EPITECH PROJECT, 2018
+## philosopher
+## File description:
+## makefile
 ##
 
 CC      = gcc
